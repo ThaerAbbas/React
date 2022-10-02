@@ -1,9 +1,19 @@
+import Header from "./Layout/Header/Header"
+import Footer from "./Layout/Footer/Footer"
+import { Link } from "react-router-dom";
+
 export const UsersList = ({persons}) => {
   
   
     const listItems =  <ul> </ul>;
      
           return (
+            <>
+     
+            <Header />
+            
+            
+         
               <div>
            <div className="contact-list-container">
             
@@ -25,7 +35,8 @@ export const UsersList = ({persons}) => {
               <th style={{fontWeight: "normal", fontSize: 25}}> {person.lastname}</th>
               <th style={{fontWeight: "normal", fontSize: 25}}> {person.age}</th>
               <th style={{fontWeight: "normal", fontSize: 25}}> {person.nationality}</th>
-              <th style={{fontWeight: "normal", fontSize: 25}}> {person.email}</th>     
+              <th style={{fontWeight: "normal", fontSize: 25}}> {person.email}</th>
+              <th> <Link to="/Home/PersonDetails"><p>Person Details</p></Link></th>     
             </tr>
             
              ))}
@@ -34,5 +45,9 @@ export const UsersList = ({persons}) => {
           </table>
                 
               </div>
+              <Footer />
+         
+            
+         </>
             );
         }

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Context } from './Layout/Header/Context';
+import { Context } from './Context';
 import { Link } from "react-router-dom";
 
 const Logout = ()  => {

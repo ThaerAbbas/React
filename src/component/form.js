@@ -2,6 +2,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import React, { useState } from "react";
 
+import Header from "./Layout/Header/Header"
+import Footer from "./Layout/Footer/Footer"
 
 export const FormUsers = ({addPerson})  =>{
 
@@ -29,7 +31,10 @@ export const FormUsers = ({addPerson})  =>{
   
 
   return (
-    
+    <>
+    <Header />
+      
+   
     <div class="formUser">
     
       <form onSubmit={handleSubmit} >
@@ -90,5 +95,6 @@ export const FormUsers = ({addPerson})  =>{
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
+     <Footer /></>
   );
 };
